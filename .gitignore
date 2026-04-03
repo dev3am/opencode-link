@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.opencode/
+opencode.json
+docs/superpowers
+docs/
+tmp
+temp
