@@ -1,6 +1,6 @@
 {
   "name": "opencode-link",
-  "version": "0.1.2",
+  "version": "0.1.21",
   "type": "module",
   "description": "Messaging channel bridge for OpenCode — interact with your AI coding session from Discord, Slack, and more",
   "main": "dist/index.js",
@@ -34,6 +34,14 @@
     "coding"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jin-chillo/opencode-link.git"
+  },
+  "homepage": "https://github.com/jin-chillo/opencode-link#readme",
+  "bugs": {
+    "url": "https://github.com/jin-chillo/opencode-link/issues"
+  },
   "dependencies": {
     "@opencode-ai/plugin": "^1.3.0",
     "@slack/bolt": "^4.6.0",
