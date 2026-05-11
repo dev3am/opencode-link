@@ -12,7 +12,7 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    if: github.repository == 'jin-chillo/opencode-link'
+    if: github.repository == 'dev3am/opencode-link'
     environment: Release
     steps:
       - uses: actions/checkout@v4
