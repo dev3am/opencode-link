@@ -1,6 +1,6 @@
 {
   "name": "opencode-link",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "type": "module",
   "description": "Messaging channel bridge for OpenCode — interact with your AI coding session from Discord, Slack, and more",
   "main": "dist/index.js",
