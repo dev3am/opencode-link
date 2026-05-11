@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
-      - run: bun install --frozen-lockfile
+      - run: npm ci
       - run: bun run lint
 
   format:
@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
-      - run: bun install --frozen-lockfile
+      - run: npm ci
       - run: bun run fmt:check
 
   typecheck:
@@ -29,7 +29,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
-      - run: bun install --frozen-lockfile
+      - run: npm ci
       - run: bunx tsc --noEmit
 
   test:
@@ -37,7 +37,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
-      - run: bun install --frozen-lockfile
+      - run: npm ci
       - run: bun test
 
   build:
@@ -45,5 +45,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
-      - run: bun install --frozen-lockfile
+      - run: npm ci
       - run: bun run build
