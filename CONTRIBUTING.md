@@ -45,9 +45,34 @@ CI will automatically run lint, format check, typecheck, test, and build on your
 
 ## Reporting Issues
 
-Open a [GitHub issue](https://github.com/jin-chillo/opencode-link/issues) with:
+Open a [GitHub issue](https://github.com/dev3am/opencode-link/issues) with:
 
 - What you expected to happen
 - What actually happened
 - Steps to reproduce
 - Provider (Discord / Slack / Telegram)
+
+## Release Process (Maintainers Only)
+
+### Prerequisites
+
+- GitHub repo Settings → Secrets → `NPM_TOKEN` (npm Automation token)
+- GitHub repo Settings → Rules → Ruleset with CI status checks required
+- GitHub repo Settings → Environments → `Release`
+
+### Deploy
+
+```bash
+npm version patch        # Bumps version, creates commit + tag
+git push && git push --tags   # Push triggers CD → npm publish
+```
+
+The CD workflow (`.github/workflows/deploy.yml`) automatically:
+1. Checks out the code at the tagged version
+2. Installs dependencies and builds
+3. Publishes to npm with provenance
+
+### Version Policy
+
+- **Contributors**: Do not modify `package.json` version. Focus on code and tests.
+- **Maintainers**: Run `npm version patch` (or `minor`, `major`) on `main` after merge to trigger deployment.
