@@ -35,7 +35,10 @@ export class MessageQueue<T> {
 
     this._processing = true;
     const msg = this.queue.shift();
-    if (!msg) return;
+    if (!msg) {
+      this._processing = false;
+      return;
+    }
 
     this.processor(msg)
       .catch(() => {})

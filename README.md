@@ -1,6 +1,6 @@
 # opencode-link
 
-[![CI](https://github.com/jin-chillo/opencode-link/actions/workflows/ci.yml/badge.svg)](https://github.com/jin-chillo/opencode-link/actions/workflows/ci.yml)
+[![CI](https://github.com/dev3am/opencode-link/actions/workflows/ci.yml/badge.svg)](https://github.com/dev3am/opencode-link/actions/workflows/ci.yml)
 
 Messaging channel bridge for [OpenCode](https://opencode.ai). Control your AI coding session from Discord, Slack, or Telegram.
 
