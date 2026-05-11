@@ -1,5 +1,7 @@
 # opencode-link
 
+[![CI](https://github.com/dev3am/opencode-link/actions/workflows/ci.yml/badge.svg)](https://github.com/dev3am/opencode-link/actions/workflows/ci.yml)
+
 Messaging channel bridge for [OpenCode](https://opencode.ai). Control your AI coding session from Discord, Slack, or Telegram.
 
 ## Features
@@ -179,11 +181,19 @@ This file is auto-added to `.gitignore`.
 ## Development
 
 ```bash
+npm install         # Install dependencies
 npm run build       # Build once
 npm run dev         # Watch mode (auto-rebuild on changes)
-npm run test        # Run tests
+bun test            # Run tests
+bun run lint        # Lint check
+bun run fmt         # Auto-format code
+bun run check       # Run all checks (test + lint + format + typecheck + build)
 npm run setup:dev   # Set up local dev environment
 ```
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. All PRs require passing CI checks before merge.
 
 ## License
 

@@ -22,6 +22,10 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "test": "bun test",
+    "lint": "biome check src/ tests/",
+    "fmt": "biome format --write src/ tests/",
+    "fmt:check": "biome format src/ tests/",
+    "check": "bun test && bun run lint && bun run fmt:check && tsc --noEmit && npm run build",
     "setup:dev": "node scripts/setup-dev.js",
     "prepublishOnly": "npm run build"
   },
@@ -51,6 +55,7 @@
     "grammy": "^1.42.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.15",
     "@types/node": "^22.0.0",
     "tsup": "^8.4.0",
     "typescript": "^5.8.0"

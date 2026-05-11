@@ -22,16 +22,20 @@ npm run setup:dev
 ```bash
 npm run dev         # Watch mode (auto-rebuild on changes)
 npm run build       # Build once
-npm run test        # Run tests with bun
+bun test            # Run tests
+bun run lint        # Lint check
+bun run fmt         # Auto-format code
+bun run check       # Run all checks (test + lint + format + typecheck + build)
 ```
 
 ## Pull Request Process
 
-1. Create a feature branch from `dev`
+1. Create a short-lived feature branch from `main` (e.g. `feature/add-slack`, `fix/queue-bug`)
 2. Make your changes with tests if applicable
-3. Ensure all tests pass (`npm run test`)
-4. Ensure the build succeeds (`npm run build`)
-5. Open a pull request with a clear description of the change
+3. Run `bun run check` to verify all checks pass (test, lint, format, typecheck, build)
+4. Open a pull request against `main` with a clear description of the change
+
+CI will automatically run lint, format check, typecheck, test, and build on your PR. All checks must pass before merge.
 
 ## Code Style
 
